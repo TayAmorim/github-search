@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Github</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="card-body">
+        <p>Digite um nome para encontrar usuários e repositórios</p>
+        <input id="search" type="text" class="form-control" required />
+      </div>
+      <div class="dark-mode">
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="label">
+          <div class="ball"></div>
+        </label>
+      </div>
+    </header>
+    <main class="disabled">
+      <section id="side-left">
+        <section id="profile"></section>
+        <section id="social-links"></section>
+        <!--<section id="technologies">
+          <h2>Tecnologias</h2>
+          <ul class="technologies-info">
+            <li>javascript</li>
+            <li>reactjs</li>
+            <li>nodejs</li>
+            <li>git</li>
+            <li>github</li>
+            <li>html</li>
+            <li>css</li>
+            <li>elixir</li>
+            <li>react native</li>
+          </ul>
+        </section> -->
+        <!--<section id="experiences">
+          <h2>Experiências</h2>
+          <ul class="experiences-info">
+            <li>
+              <h4>Rocketseat</h4>
+              <p>2019 - Atualmente</p>
+              <p>Community Experience</p>
+            </li>
+            <li>
+              <h4>Rocketseat</h4>
+              <p>2019 - Atualmente</p>
+              <p>Community Experience</p>
+            </li>
+            <li>
+              <h4>Rocketseat</h4>
+              <p>2019 - Atualmente</p>
+              <p>Community Experience</p>
+            </li>
+            <li>
+              <h4>Rocketseat</h4>
+              <p>2019 - Atualmente</p>
+              <p>Community Experience</p>
+            </li>
+          </ul>
+        </section> -->
+        <!-- <section id="education">
+          <h2>Educação</h2>
+          <ul class="education-info">
+            <li>
+              <h4>Origamid</h4>
+              <p>2022 - 2022</p>
+              <p>CSS Flexbox</p>
+            </li>
+            <li>
+              <h4>Rocketseat</h4>
+              <p>2022 - 2022</p>
+              <p>CSS Flexbox</p>
+            </li>
+            <li>
+              <h4>Digital innovation</h4>
+              <p>2022 - 2022</p>
+              <p>TQI Full Stack developer</p>
+            </li>
+          </ul>
+        </section> -->
+      </section>
+      <section id="side-right">
+        <section id="projects">
+          <div class="project-text">
+            <h2>My Projects</h2>
+            <p>Veja Todos</p>
+          </div>
+          <div id="projects-info" class="projects-info"></div>
+          <!-- <div class="projects-info">
+            <a href="#" class="my-project">
+              <div class="my-project-title">
+                <span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.3333 15.8333C18.3333 16.2754 18.1577 16.6993 17.8452 17.0118C17.5326 17.3244 17.1087 17.5 16.6667 17.5H3.33334C2.89131 17.5 2.46739 17.3244 2.15483 17.0118C1.84227 16.6993 1.66667 16.2754 1.66667 15.8333V4.16667C1.66667 3.72464 1.84227 3.30072 2.15483 2.98816C2.46739 2.67559 2.89131 2.5 3.33334 2.5H7.50001L9.16667 5H16.6667C17.1087 5 17.5326 5.17559 17.8452 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V15.8333Z"
+                      stroke="#837E9F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h4>Doctorcare</h4>
+              </div>
+              <p>
+                Consulte os códigos de erro que aparecem no painel do veículo
+                Onix.
+              </p>
+              <div class="my-project-footer">
+                <div class="my-project-footer-icon">
+                  <span
+                    ><svg
+                      width="20"
+                      height="19"
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.66667L12.575 6.88334L18.3333 7.725L14.1667 11.7833L15.15 17.5167L10 14.8083L4.85001 17.5167L5.83334 11.7833L1.66667 7.725L7.42501 6.88334L10 1.66667Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p>100</p>
+                  <span
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 2.5V12.5"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 7.5C16.3807 7.5 17.5 6.38071 17.5 5C17.5 3.61929 16.3807 2.5 15 2.5C13.6193 2.5 12.5 3.61929 12.5 5C12.5 6.38071 13.6193 7.5 15 7.5Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5 17.5C6.38071 17.5 7.5 16.3807 7.5 15C7.5 13.6193 6.38071 12.5 5 12.5C3.61929 12.5 2.5 13.6193 2.5 15C2.5 16.3807 3.61929 17.5 5 17.5Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 7.5C15 9.48912 14.2098 11.3968 12.8033 12.8033C11.3968 14.2098 9.48912 15 7.5 15"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p>100</p>
+                </div>
+                <p>JavaScript</p>
+              </div>
+            </a>
+            <a href="#" class="my-project">
+              <div class="my-project-title">
+                <span>
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M18.3333 15.8333C18.3333 16.2754 18.1577 16.6993 17.8452 17.0118C17.5326 17.3244 17.1087 17.5 16.6667 17.5H3.33334C2.89131 17.5 2.46739 17.3244 2.15483 17.0118C1.84227 16.6993 1.66667 16.2754 1.66667 15.8333V4.16667C1.66667 3.72464 1.84227 3.30072 2.15483 2.98816C2.46739 2.67559 2.89131 2.5 3.33334 2.5H7.50001L9.16667 5H16.6667C17.1087 5 17.5326 5.17559 17.8452 5.48816C18.1577 5.80072 18.3333 6.22464 18.3333 6.66667V15.8333Z"
+                      stroke="#837E9F"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <h4>Doctorcare</h4>
+              </div>
+              <p>
+                Consulte os códigos de erro que aparecem no painel do veículo
+                Onix.
+              </p>
+              <div class="my-project-footer">
+                <div class="my-project-footer-icon">
+                  <span
+                    ><svg
+                      width="20"
+                      height="19"
+                      viewBox="0 0 20 19"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 1.66667L12.575 6.88334L18.3333 7.725L14.1667 11.7833L15.15 17.5167L10 14.8083L4.85001 17.5167L5.83334 11.7833L1.66667 7.725L7.42501 6.88334L10 1.66667Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p>100</p>
+                  <span
+                    ><svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 2.5V12.5"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 7.5C16.3807 7.5 17.5 6.38071 17.5 5C17.5 3.61929 16.3807 2.5 15 2.5C13.6193 2.5 12.5 3.61929 12.5 5C12.5 6.38071 13.6193 7.5 15 7.5Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M5 17.5C6.38071 17.5 7.5 16.3807 7.5 15C7.5 13.6193 6.38071 12.5 5 12.5C3.61929 12.5 2.5 13.6193 2.5 15C2.5 16.3807 3.61929 17.5 5 17.5Z"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M15 7.5C15 9.48912 14.2098 11.3968 12.8033 12.8033C11.3968 14.2098 9.48912 15 7.5 15"
+                        stroke="#837E9F"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <p>100</p>
+                </div>
+                <p>JavaScript</p>
+              </div>
+            </a>
+          </div> -->
+        </section>
+        <section id="post">
+          <div class="post-text">
+            <h2>Recent Posts</h2>
+          </div>
+          <a href="#" class="post-info">
+            <div class="post-img">
+              <img src="./assets/perfil.jpeg" alt="" />
+            </div>
+            <div class="post-text-info">
+              <h3>
+                Erro adb devices no Genymotion e Android Studio (React Native)
+              </h3>
+              <p>2 anos atrás</p>
+              <p>
+                Erro adb devices no Genymotion e Android Studio (React Native)
+              </p>
+              <ul class="post-hastag">
+                <li>#react-native</li>
+                <li>#genimotion</li>
+                <li>#react-native</li>
+                <li>#genimotion</li>
+              </ul>
+            </div>
+          </a>
+        </section>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
