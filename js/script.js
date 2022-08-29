@@ -3,10 +3,11 @@
   const profile = document.getElementById('profile')
   const activated = document.querySelector('main')
   const socialLinks = document.getElementById('social-links')
+  const projectUrl = document.querySelector('#project-text')
   const url = 'https://api.github.com/users'
   const client_id = 'Iv1.8f477e9a102bab59'
   const client_secret = '34c4988087e053f3d76666d1571252099aa8e17c'
-  const count = 4
+  const count = 7
   const sort = 'created: asc'
 
   async function getUser(user) {
@@ -189,6 +190,13 @@
     </li>
   </ul>
 </section>`
+
+    projectUrl.innerHTML = `<a href="${user.html_url}" target="_blank" id="project-text" class="project-text">
+    <div>
+    <h2>My Projects</h2>
+    <p>Veja Todos</p>
+  </div>
+  </a>`
   }
 
   function showRepos(repos) {

@@ -159,7 +159,7 @@ header {
 }
 
 .profile-img {
-  border: 2px solid #00ff00;
+  border: 2px solid var(--bg-techs);
   display: flex;
   border-radius: 50%;
   flex-direction: column;
@@ -251,7 +251,6 @@ a {
   flex-wrap: wrap;
 }
 
-.project-text,
 .my-project,
 .post-text,
 .post-info {
@@ -265,10 +264,13 @@ a {
   margin-bottom: 0;
 }
 
-.project-text {
+.project-text div {
+  background: var(--bg-cards);
+  padding: 20px;
+  border-radius: 20px;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-content: center;
   margin-bottom: 30px;
 }
 
