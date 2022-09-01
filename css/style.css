@@ -225,25 +225,6 @@ a {
   font-weight: bold;
 }
 
-.experiences-info li,
-.education-info li {
-  margin-left: 2rem;
-  padding-bottom: 20px;
-  list-style: disc;
-  color: var(--text-color);
-  font-size: 0.75rem;
-}
-
-.experiences-info p:nth-child(even),
-.education-info li p:nth-child(even) {
-  font-weight: lighter;
-}
-
-.education-info li p,
-.experiences-info li p {
-  padding-top: 5px;
-}
-
 #side-right {
   flex: 3;
   display: flex;
@@ -376,5 +357,11 @@ a {
   .post-info {
     display: flex;
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  #side-left #technologies-info li {
+    flex: 1 1 90px;
   }
 }

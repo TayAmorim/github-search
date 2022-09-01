@@ -7,8 +7,9 @@
   const url = 'https://api.github.com/users'
   const client_id = 'Iv1.8f477e9a102bab59'
   const client_secret = '34c4988087e053f3d76666d1571252099aa8e17c'
-  const count = 7
+  const count = 9
   const sort = 'created: asc'
+  let timer = null
 
   async function getUser(user) {
     const profileResponse = await fetch(
@@ -201,6 +202,7 @@
 
   function showRepos(repos) {
     let output = ''
+    let technologies = new Set()
 
     repos.forEach(repo => {
       output += `<div class="projects-info">
@@ -292,23 +294,36 @@
         </div>
         </a>
     </div>`
+
+      technologies.add(repo.language)
     })
 
+    const tecList = [...technologies]
+      .map(item => {
+        if (!item) return
+        return `<li>${item}</li>`
+      })
+      .join(' ')
+
     document.getElementById('projects-info').innerHTML = output
+    document.getElementById('technologies-info').innerHTML = tecList
   }
 
   search.addEventListener('keyup', e => {
-    const user = e.target.value
+    clearTimeout(timer)
+    timer = setTimeout(function () {
+      const user = e.target.value
 
-    if (user.length > 0) {
-      getUser(user).then(res => {
-        showProfile(res.profile)
-        showRepos(res.repos)
-      })
-      activated.classList.remove('disabled')
-    } else {
-      activated.classList.add('disabled')
-    }
+      if (user.length > 2) {
+        getUser(user).then(res => {
+          showProfile(res.profile)
+          showRepos(res.repos)
+        })
+        activated.classList.remove('disabled')
+      } else {
+        activated.classList.add('disabled')
+      }
+    }, 500)
   })
 })()
 
